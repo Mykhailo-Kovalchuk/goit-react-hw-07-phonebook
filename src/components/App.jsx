@@ -1,11 +1,12 @@
-// Компонент App на redux - дуже мало коду, логіка виконується в компонентах, де через useSelector та useDispatch 
+// Компонент App на redux - дуже мало коду, логіка виконується в компонентах, де через useSelector та useDispatch
 // безпосередньо зі стору беруться всі дані які необхідні і вносяться зміни.
 import { ContactForm } from './ContactForm/ContactForm';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
-
+// import { fetchContacts } from '../services/api';
 
 export const App = () => {
+  // fetchContacts();
 
   return (
     <div
@@ -22,22 +23,11 @@ export const App = () => {
       <h1>Phonebook</h1>
       <ContactForm />
       <h2>Contacts</h2>
-      <Filter   />
+      <Filter />
       <ContactList />
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
 
 //////////////////////////// компонент App виглядатиме так якщов ньому будуть використовуватись пропси, стани, навіть хуки... багато....
 
